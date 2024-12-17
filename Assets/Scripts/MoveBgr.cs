@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveBgr : MonoBehaviour
 {
-    public float speed = 1;
+   /* public float speed = 1;*/
     [SerializeField] float _dir = 1;
     public float Dir
     {
@@ -15,6 +15,6 @@ public class MoveBgr : MonoBehaviour
    
     void Update()
     {
-        transform.Translate(Vector2.right*_dir*speed*Time.deltaTime);
+        transform.Translate(Vector2.right*_dir/*speed*/*Time.deltaTime);
     }
 }

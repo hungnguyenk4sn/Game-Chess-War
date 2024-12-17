@@ -2,14 +2,14 @@
 
 public class ScrollTexture2D : MonoBehaviour
 {
-    [SerializeField] float _scrollSpeedX = 0.5f; // Tốc độ cuộn theo trục X
+    [SerializeField] float _scrollSpeedX = 0f; // Tốc độ cuộn theo trục X
     public float ScrollSpeedX
     {
         set { _scrollSpeedX = value; }
         get { return _scrollSpeedX; }
     }
 
-    [SerializeField] float scrollSpeedY = 0.5f; // Tốc độ cuộn theo trục Y
+    [SerializeField] float scrollSpeedY = 0f; // Tốc độ cuộn theo trục Y
     private Material material;       // Lưu Material từ Sprite Renderer
     private Vector2 offset;          // Lưu giá trị offset
 
