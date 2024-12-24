@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.ComponentModel;
+using UnityEngine;
 
 public class SpamBirdRight : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class SpamBirdRight : MonoBehaviour
     public float radius = 5f;       // Bán kính cụm
 
     private GameObject centerClone; // Clone trung tâm
-
+    
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
 
             if (spawnPoint == null)

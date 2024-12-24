@@ -16,6 +16,7 @@ public class BulletRed : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bluebird"))
         {
+            collision.gameObject.GetComponent<AttackBlueBird>().TakeDamage();
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

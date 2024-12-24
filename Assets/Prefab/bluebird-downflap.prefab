@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732df2f7c609e9d4484f42c2bf42f1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 12
+  attackRange: 10
   target: {fileID: 7280585659636374816, guid: c5dfc376302b1f444b671aa83db7466d, type: 3}
   bulletPrefab: {fileID: 2383623951651449658, guid: 0d95300ea9730c846afdce895fe06c80, type: 3}
   bulletSpawnPoint: {fileID: 4514458787060127264}

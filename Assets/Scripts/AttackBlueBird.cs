@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AttackBlueBird : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AttackBlueBird : MonoBehaviour
     public Transform bulletSpawnPoint; // Vị trí bắn đạn
     public float bulletSpeed = 20f; // Tốc độ đạn
     public float attackInterval = 2.0f; // Khoảng thời gian giữa mỗi lần tấn công
+    public SpamBirdLeft currentPool;
 
     private void Start()
     {
@@ -52,5 +54,10 @@ public class AttackBlueBird : MonoBehaviour
             bulletRb.velocity = (direction * bulletSpeed);
             Debug.Log("Viên đạn đã được bắn!");
         }
+    }
+
+    public void TakeDamage()
+    {
+        currentPool.clonetransform.Remove(transform);
     }
 }
