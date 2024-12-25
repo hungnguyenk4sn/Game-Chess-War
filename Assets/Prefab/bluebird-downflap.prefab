@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898f0541d54a12b43ae16e3c651be4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   speed2: 5
 --- !u!50 &4514458788575800545
 Rigidbody2D:
@@ -189,3 +189,5 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 4514458787060127264}
   bulletSpeed: 2
   attackInterval: 2
+  currentPool: {fileID: 3444753509120054338, guid: 397b545683fdc56418f3ecef425f1302, type: 3}
+  SpamBirdRight: {fileID: 8324018041826106148, guid: 4f87cb58fe1759a45bc5c34e7b10b67f, type: 3}

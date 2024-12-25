@@ -11,6 +11,7 @@ public class AttackBlueBird : MonoBehaviour
     public float bulletSpeed = 20f; // Tốc độ đạn
     public float attackInterval = 2.0f; // Khoảng thời gian giữa mỗi lần tấn công
     public SpamBirdLeft currentPool;
+    public SpamBirdRight SpamBirdRight;
 
     private void Start()
     {
@@ -22,6 +23,19 @@ public class AttackBlueBird : MonoBehaviour
 
     IEnumerator AttackRoutine()
     {
+        
+        var minDistance= Mathf.Infinity;
+        Transform target=null;
+        for(int i = 0; i<SpamBirdRight.cloneTranformRed.Count; i++)
+        {
+            float distance = Vector3.Distance(this.transform.position,SpamBirdRight.cloneTranformRed[i].position);
+            if(distance < minDistance)
+            {
+                minDistance = distance;
+                target = SpamBirdRight.cloneTranformRed[i];
+            } 
+           
+        }
         while (true)
         {
             if (target != null)

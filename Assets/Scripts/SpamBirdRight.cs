@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class SpamBirdRight : MonoBehaviour
@@ -10,11 +11,11 @@ public class SpamBirdRight : MonoBehaviour
     public float radius = 5f;       // Bán kính cụm
 
     private GameObject centerClone; // Clone trung tâm
-    
+    public List<Transform> cloneTranformRed = new List<Transform>();
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
 
             if (spawnPoint == null)
@@ -39,6 +40,7 @@ public class SpamBirdRight : MonoBehaviour
                 position = spawnPoint.position;
                 centerClone = Instantiate(prefab, position, Quaternion.identity);
                 centerClone.name = "Center Clone";
+                cloneTranformRed.Add(centerClone.transform);
             }
             else
             {
@@ -48,6 +50,7 @@ public class SpamBirdRight : MonoBehaviour
 
                 GameObject clone = Instantiate(prefab, position, Quaternion.identity);
                 clone.name = $"Clone_{i}";
+                cloneTranformRed.Add (clone.transform); 
             }
         }
     }

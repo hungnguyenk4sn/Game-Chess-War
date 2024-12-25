@@ -9,6 +9,7 @@ public class AttackRedBird : MonoBehaviour
     public float bulletSpeed = 20f; // Tốc độ đạn
     public float attackInterval = 2.0f; // Khoảng thời gian giữa mỗi lần tấn công
     public SpamBirdLeft spamBirdLeft;
+    public SpamBirdRight spamBirdRight;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class AttackRedBird : MonoBehaviour
             Transform target = null;
             for (int i = 0; i < spamBirdLeft.clonetransform.Count; i++)
             {
-                float distance = Vector3.Distance(this.transform.position, spamBirdLeft.clonetransform[i].position);
+                float distance = Vector3.Distance(this.transform.position, spamBirdLeft.clonetransform[i].position);    
                 if(distance < minDistance)
                 {
                     minDistance = distance;
@@ -64,5 +65,10 @@ public class AttackRedBird : MonoBehaviour
             bulletRb.velocity = (direction * bulletSpeed);
             Debug.Log("Viên đạn đã được bắn!");
         }
+    }
+
+    public  void TakeDameRed()
+    {
+        spamBirdRight.cloneTranformRed.Remove(transform);
     }
 }
