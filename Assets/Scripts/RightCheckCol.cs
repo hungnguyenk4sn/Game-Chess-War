@@ -18,7 +18,7 @@ public class RightCheckCol : MonoBehaviour
         if (collision.gameObject.CompareTag("redbird"))
         {
             _scoreRight += 3;
-            Debug.Log(_scoreRight); 
+           /* Debug.Log(_scoreRight); */
         }
     }
 }

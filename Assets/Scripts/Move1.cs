@@ -24,7 +24,7 @@ public class Move1 : MonoBehaviour
         if (collision.gameObject.CompareTag("bluebird"))
         {
             collision.rigidbody.AddForce(Vector2.right * speed2);
-            Debug.Log(collision.gameObject.tag);    
+          /*  Debug.Log(collision.gameObject.tag);*/    
         }
     }
 }

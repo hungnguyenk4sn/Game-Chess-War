@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AttackBlueBird : MonoBehaviour
+public class TestAttack : MonoBehaviour
 {
     public float attackRange = 10.0f; // Phạm vi tấn công
     public GameObject bulletPrefab; // Prefab của viên đạn
@@ -9,16 +9,16 @@ public class AttackBlueBird : MonoBehaviour
     public float bulletSpeed = 20f; // Tốc độ đạn
     public float attackInterval = 2.0f; // Khoảng thời gian giữa mỗi lần tấn công
 
-    SpamBirdLeft currentPool;
-    SpamBirdRight spamBirdRight;
+    SpamBirdLeft spamBirdLeft;
+    SpamBirdRight currentPoolRed;
 
     private Transform target; // Mục tiêu hiện tại
     private bool canAttack = true; // Flag kiểm soát thời gian tấn công
 
     private void Start()
     {
-        spamBirdRight = GameObject.Find("SpamPointRight").GetComponent<SpamBirdRight>();
-        currentPool = GameObject.Find("SpamPointLeft").GetComponent<SpamBirdLeft>();
+       spamBirdLeft = GameObject.Find("SpamPointLeft").GetComponent<SpamBirdLeft>();   
+       currentPoolRed = GameObject.Find("SpamPointRight").GetComponent<SpamBirdRight>();
 
         StartCoroutine(AttackRoutine());
     }
@@ -36,14 +36,14 @@ public class AttackBlueBird : MonoBehaviour
         var minDistance = Mathf.Infinity;
         target = null;
 
-        for (int i = 0; i < spamBirdRight.cloneTranformRed.Count; i++)
+        for (int i = 0; i < spamBirdLeft.clonetransform.Count; i++)
         {
-            float distance = Vector3.Distance(this.transform.position, spamBirdRight.cloneTranformRed[i].position);
+            float distance = Vector3.Distance(this.transform.position, spamBirdLeft.clonetransform[i].position);
 
             if (distance < minDistance && distance <= attackRange)
             {
                 minDistance = distance;
-                 target = spamBirdRight.cloneTranformRed[i];
+                target = spamBirdLeft.clonetransform[i];
             }
         }
     }
@@ -75,7 +75,7 @@ public class AttackBlueBird : MonoBehaviour
         if (enemyTarget == null) return;
 
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
-       /* Debug.Log("Bắn đạn vào mục tiêu: " + enemyTarget.name);*/
+        Debug.Log("co ban");
 
         Vector3 direction = (enemyTarget.position - bulletSpawnPoint.position).normalized;
         Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
@@ -89,11 +89,11 @@ public class AttackBlueBird : MonoBehaviour
     /// <summary>
     /// Gọi khi đối tượng bị phá hủy
     /// </summary>
-    public void TakeDameBlue()
+    public void TakeDameTest()
     {
-        if (currentPool != null && currentPool.clonetransform.Contains(transform))
+        if (currentPoolRed != null && currentPoolRed.cloneTranformRed.Contains(transform))
         {
-            currentPool.clonetransform.Remove(transform);
+            currentPoolRed.cloneTranformRed.Remove(transform);
         }
     }
 }

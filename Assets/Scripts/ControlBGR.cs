@@ -36,14 +36,14 @@ public class ControlBGR : MonoBehaviour
             dirMove.Dir = -1;
             scrollTexture2DMainLeft.ScrollSpeedX = 0.5f;
             scrollTexture2DMainRight.ScrollSpeedX = 0.5f;
-            scrollTexture2DPipe.ScrollSpeedX =-0.5f;
+            scrollTexture2DPipe.ScrollSpeedX =-1f;
         }
         else if ((forceL < forceR))
         {
             dirMove.Dir = 1;
             scrollTexture2DMainLeft.ScrollSpeedX = -0.5f;
             scrollTexture2DMainRight.ScrollSpeedX = -0.5f;
-            scrollTexture2DPipe.ScrollSpeedX = 0.5f;
+            scrollTexture2DPipe.ScrollSpeedX = 1f;
         }
         else
         {

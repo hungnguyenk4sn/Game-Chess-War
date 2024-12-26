@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3481491974355633460
+--- !u!1 &565676694093739208
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4451768780075574364}
+  - component: {fileID: 742756852243092896}
   m_Layer: 0
   m_Name: bulletSpawnPoint (1)
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4451768780075574364
+--- !u!4 &742756852243092896
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3481491974355633460}
+  m_GameObject: {fileID: 565676694093739208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.158, y: -0.026, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7280585659636374816}
+  m_Father: {fileID: 5944970726574795996}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7280585659636374819
+--- !u!1 &5944970726574795999
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,42 +39,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7280585659636374816}
-  - component: {fileID: 7280585659636374844}
-  - component: {fileID: 7280585659636374817}
-  - component: {fileID: 7280585659636374845}
-  - component: {fileID: 7280585659636374842}
-  - component: {fileID: 5104556605041811341}
+  - component: {fileID: 5944970726574795996}
+  - component: {fileID: 5944970726574795968}
+  - component: {fileID: 5944970726574795997}
+  - component: {fileID: 5944970726574795969}
+  - component: {fileID: 5944970726574795974}
+  - component: {fileID: 2485720599206307716}
   m_Layer: 0
-  m_Name: redbird-downflap
+  m_Name: redbird-downflap 1
   m_TagString: redbird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7280585659636374816
+--- !u!4 &5944970726574795996
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7280585659636374819}
+  m_GameObject: {fileID: 5944970726574795999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.35, y: -0.1, z: -0.010317268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4451768780075574364}
+  - {fileID: 742756852243092896}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7280585659636374844
+--- !u!212 &5944970726574795968
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7280585659636374819}
+  m_GameObject: {fileID: 5944970726574795999}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -120,14 +120,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &7280585659636374817
+--- !u!50 &5944970726574795997
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7280585659636374819}
+  m_GameObject: {fileID: 5944970726574795999}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -141,13 +141,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7280585659636374845
+--- !u!58 &5944970726574795969
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7280585659636374819}
+  m_GameObject: {fileID: 5944970726574795999}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ac14d15b7fc8af540b87149b2e31f959, type: 2}
@@ -157,13 +157,13 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.17
---- !u!114 &7280585659636374842
+--- !u!114 &5944970726574795974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7280585659636374819}
+  m_GameObject: {fileID: 5944970726574795999}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edb43d0aeb0a99945a73fde5797e21d0, type: 3}
@@ -171,22 +171,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   speed2: 5
---- !u!114 &5104556605041811341
+--- !u!114 &2485720599206307716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7280585659636374819}
+  m_GameObject: {fileID: 5944970726574795999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75387518853b3a47bcd8f81087f14e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4889f53944ba0464c83261ed3b8121bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 10
-  bulletPrefab: {fileID: 6121633750542913152, guid: 1d8202148367bcf42b68bed701ce7d12, type: 3}
-  bulletSpawnPoint: {fileID: 4451768780075574364}
-  bulletSpeed: 2
+  attackRange: 5
+  bulletPrefab: {fileID: 1003778761115019360, guid: 3fa2bb66712e94548b37e1d05fed027c, type: 3}
+  bulletSpawnPoint: {fileID: 742756852243092896}
+  bulletSpeed: 10
   attackInterval: 2
-  spamBirdLeft: {fileID: 3444753509120054338, guid: 397b545683fdc56418f3ecef425f1302, type: 3}
-  spamBirdRight: {fileID: 8324018041826106148, guid: 4f87cb58fe1759a45bc5c34e7b10b67f, type: 3}

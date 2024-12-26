@@ -18,7 +18,7 @@ public class LeftCheckColi : MonoBehaviour
         if (collision.gameObject.CompareTag("bluebird"))
         {
             _scoreLeft += 3;
-            Debug.Log(_scoreLeft); 
+          /*  Debug.Log(_scoreLeft); */
         }
     }
 }
